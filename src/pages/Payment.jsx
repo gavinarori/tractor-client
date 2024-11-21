@@ -17,13 +17,13 @@ const Payment = () => {
                                 <div className='flex flex-wrap'>
                                     <div onClick={() => setPaymentMethod('stripe')} className={`w-[20%] border-r rounded-lg cursor-pointer py-8 px-12 ${paymentMethod === 'stripe' ? 'bg-white' : 'bg-slate-100'}`}>
                                         <div className='flex flex-col gap-[3px] justify-center items-center'>
-                                            <img src="http://localhost:3000/images/payment/stripe.png" alt="stripe" />
+                                            <img src="https://www.citypng.com/public/uploads/preview/hd-stripe-official-logo-png-701751694777755j0aa3puxte.png"  className="h-16 w-16" alt="stripe" />
                                             <span className='text-slate-600'>Stripe</span>
                                         </div>
                                     </div>
                                     <div onClick={() => setPaymentMethod('bkash')} className={`w-[20%] border-r rounded-lg cursor-pointer py-8 px-12 ${paymentMethod === 'bkash' ? 'bg-white' : 'bg-slate-100'}`}>
                                         <div className='flex flex-col gap-[3px] justify-center items-center'>
-                                            <img src="http://localhost:3000/images/payment/bkash.png" alt="bkash" />
+                                            <img src="https://freepnglogo.com/images/all_img/1701670291bKash-App-Logo-PNG.png" alt="bkash" />
                                             <span className='text-slate-600'>Bkash</span>
                                         </div>
                                     </div>
