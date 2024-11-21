@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { customer_login, messageClear } from '../store/reducers/authReducer';
 import toast from 'react-hot-toast';
 import FadeLoader from 'react-spinners/FadeLoader';
+import { GoogleLogin } from '@react-oauth/google';
 
 const Login = () => {
   const { loader, successMessage, errorMessage, userInfo } = useSelector((state) => state.auth);
@@ -25,6 +26,11 @@ const Login = () => {
   const login = (e) => {
     e.preventDefault();
     dispatch(customer_login(state));
+  };
+
+  const handleGoogleLoginSuccess = (response) => {
+    const { credential } = response;
+    dispatch(customer_login({ token: credential }));
   };
 
   useEffect(() => {
@@ -94,6 +100,12 @@ const Login = () => {
                   alt="Google"
                   className="h-[18px] w-[18px]"
                 />
+                 <GoogleLogin
+                onSuccess={handleGoogleLoginSuccess}
+                onError={(error) => toast.error('Google login failed.')}
+                useOneTap
+                theme="filled_blue"
+              />
                 Continue with Google
               </button>
             </div>
