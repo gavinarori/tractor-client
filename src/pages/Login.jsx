@@ -59,24 +59,6 @@ const Login = () => {
         src="https://img.freepik.com/premium-photo/spring-sowing-season-farmer-with-tractor-sows-corn-seeds-his-field-planting-corn-with-trailed-planter-farming-seeding-concept-agriculture-agricultural-machinery_194143-5782.jpg?w=740"
         className="absolute inset-0 h-full w-full object-cover opacity-80"
       />
-
-      <div className="hidden lg:relative lg:block lg:p-12">
-        <a className="flex size-16 items-center justify-center rounded-full bg-white text-blue-600 sm:size-20" href="#">
-          <span className="sr-only">Home</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008Z" />
-        </svg>
-        </a>
-
-        <h2 data-testid="text-title" className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-          Welcome to <span>sitecraft</span>
-        </h2>
-
-        <p data-testid="text-paragraph" className="mt-4 leading-relaxed text-white/90">
-          Swift and reliable emergency responses: your safety is our priority. Trust us for quick assistance when you need it most.
-        </p>
-      </div>
     </section>
 
         {/* Right Section */}
@@ -126,7 +108,7 @@ const Login = () => {
               />
               <button
                 type="submit"
-                className="mt-4 inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white">
+                className="mt-4 inline-flex w-full items-center justify-center rounded-lg bg-red-600 p-2 py-3 text-sm font-medium text-white">
                 Continue
               </button>
             </form>
