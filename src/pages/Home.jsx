@@ -7,6 +7,7 @@ import FeatureProducts from '../components/products/FeatureProducts'
 import Products from '../components/products/Products'
 import Footer from '../components/Footer'
 import { get_category, get_products } from '../store/reducers/homeReducer'
+import Cta from './Cta'
 const Home = () => {
     const dispatch = useDispatch()
     const {products, latest_product, topRated_product, discount_product } = useSelector(state => state.home)
@@ -14,7 +15,7 @@ const Home = () => {
         dispatch(get_products())
     }, [])
     return (
-        <div className='w-full'>
+        <div className='w-auto'>
             <Heders />
             <Banner />
             <div className='my-4'>
@@ -38,6 +39,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Cta/>
             <Footer />
         </div>
     )
